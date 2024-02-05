@@ -2,55 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jacob&#39;s Blog</title>
-    <link>https://jacob-rc.github.io/</link>
+    <link>https://jacobc.us/</link>
     <description>Recent content on Jacob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Dec 2023 19:41:34 -0800</lastBuildDate><atom:link href="https://jacob-rc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Feb 2024 22:56:13 -0800</lastBuildDate><atom:link href="https://jacobc.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>College Counselors, Disecting Their Value</title>
+      <link>https://jacobc.us/posts/jacobhottakes2/</link>
+      <pubDate>Thu, 01 Feb 2024 22:56:13 -0800</pubDate>
+      
+      <guid>https://jacobc.us/posts/jacobhottakes2/</guid>
+      <description>The Lay of the Land A Seemingly Green Light School Counselors Private Counselors (Paid) Author&amp;rsquo;s Note The Lay of the Land It’s hard to describe how much the landscape of college admissions has changed in the past 30 years. For many of the parents who have kids applying, the entire college application process can seem completely different from the one they went through. College applicant numbers seem to increase year over year, which creates a negative feedback loop.</description>
+    </item>
+    
     <item>
       <title>Debunking the Myths of Summer College Prep Programs: Are they Really Worth It?</title>
-      <link>https://jacob-rc.github.io/posts/jacobhottakes1/</link>
+      <link>https://jacobc.us/posts/jacobhottakes1/</link>
       <pubDate>Sun, 17 Dec 2023 19:41:34 -0800</pubDate>
       
-      <guid>https://jacob-rc.github.io/posts/jacobhottakes1/</guid>
+      <guid>https://jacobc.us/posts/jacobhottakes1/</guid>
       <description>Summer Programs Paid Summer Programs Hosted by External Organizations Hosted by the College Themselves Merit-Based College Programs Debunking Myths Will college programs help me get into a competitive college? How can I tell if a college program is actually prestigious or not? What are kids actually doing during these college prep programs? Would you say doing these programs are worth it? What are some cheaper alternatives? I&amp;rsquo;ll start by prefacing this by saying that everything I say is my own personal opinion and based on my own experiences.</description>
     </item>
     
     <item>
+      <title>NewportBlakeCTF Writeups</title>
+      <link>https://jacobc.us/posts/newportblakectf-writeups/</link>
+      <pubDate>Mon, 11 Dec 2023 17:43:04 -0800</pubDate>
+      
+      <guid>https://jacobc.us/posts/newportblakectf-writeups/</guid>
+      <description>Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.
+I mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I&amp;rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer.</description>
+    </item>
+    
+    <item>
       <title>Wharton Global Youth My Experience</title>
-      <link>https://jacob-rc.github.io/posts/wharton-global-youth-my-experience/</link>
+      <link>https://jacobc.us/posts/wharton-global-youth-my-experience/</link>
       <pubDate>Sat, 05 Aug 2023 16:02:14 -0700</pubDate>
       
-      <guid>https://jacob-rc.github.io/posts/wharton-global-youth-my-experience/</guid>
+      <guid>https://jacobc.us/posts/wharton-global-youth-my-experience/</guid>
       <description>What is the Wharton Global Youth Data Science Academy? My Overall Opinions Thoughts on Essentials of Entrepreneurship (EOE) Thoughts on Data Science Academy (DSA) Thoughts on Final Presentation and DSL8 Personal Growth What I Learned as a Person What I Learned as a Leader Advice to Others Applying to Wharton Global Youth Programs Conclusion Over the summer, I had the opportunity to attend Wharton Global Youth&amp;rsquo;s data science academy. This blog post is about my experiences with the program, my overall thoughts on these kinds of programs, and the things I learned both about class and about myself as a person.</description>
     </item>
     
     <item>
       <title>AP Exams, a Memoir</title>
-      <link>https://jacob-rc.github.io/posts/ap-exams-a-memoir/</link>
+      <link>https://jacobc.us/posts/ap-exams-a-memoir/</link>
       <pubDate>Wed, 05 Jul 2023 16:02:14 -0700</pubDate>
       
-      <guid>https://jacob-rc.github.io/posts/ap-exams-a-memoir/</guid>
+      <guid>https://jacobc.us/posts/ap-exams-a-memoir/</guid>
       <description>Table of Contents
 Preamble What Are AP Exams? Remembrance Things I&amp;rsquo;ve Enjoyed About AP Exams Things I&amp;rsquo;ve Enjoyed Less About AP Exams Conclusion Preamble While not exactly pertaining to either business or computer science, AP exams have played a large role in my high school experience so I feel they deserve a proper discussion. The main objective of this article is to describe my thoughts as well as to give current and future ap students some food for thought, especially with how they feel about these defining high school exams.</description>
     </item>
     
     <item>
       <title>Who Makes Money in Card Games?</title>
-      <link>https://jacob-rc.github.io/posts/who-makes-money-in-card-games/</link>
+      <link>https://jacobc.us/posts/who-makes-money-in-card-games/</link>
       <pubDate>Sat, 01 Jul 2023 14:57:31 -0700</pubDate>
       
-      <guid>https://jacob-rc.github.io/posts/who-makes-money-in-card-games/</guid>
+      <guid>https://jacobc.us/posts/who-makes-money-in-card-games/</guid>
       <description>Table of Contents
 Preamble Essential Question Primary and Secondary Markets Primary Markets Secondary Markets Peer to Peer Transactions Peer to Institution Transactions When the Lines Begin To Blur Takeaways How do Small Card Shops Make Money? Events Individual Cards Takeaways Preamble I&amp;rsquo;ve been a competitive card game player for a long time now; about 5 years. In that time, I&amp;rsquo;ve found a love for both the game while I’m playing, but also the other parts of the ecosystem that allow a competitive card game to function.</description>
     </item>
     
     <item>
       <title>Correlation Power Analysis in PicoCTF 2023</title>
-      <link>https://jacob-rc.github.io/posts/correlation-power-analysis-in-pico-ctf-2023/</link>
+      <link>https://jacobc.us/posts/correlation-power-analysis-in-pico-ctf-2023/</link>
       <pubDate>Mon, 26 Jun 2023 19:57:03 -0700</pubDate>
       
-      <guid>https://jacob-rc.github.io/posts/correlation-power-analysis-in-pico-ctf-2023/</guid>
+      <guid>https://jacobc.us/posts/correlation-power-analysis-in-pico-ctf-2023/</guid>
       <description>Table of Contents
 Introduction Solving the Challenge Additional Thoughts Conclusion Introduction The hardest and also most interesting cryptography challenge of PicoCTF 2023 involved undoing AES using a side channel attack, specifically power analysis.
 If I&amp;rsquo;m going to be honest, it was a pretty big surprise to see a side channel attack be the primary challenge within Pico but it was definitely a fun experience.

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>NewportBlakeCTF Writeups | Jacob&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.
+I mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I&rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer.">
+<meta name="author" content="">
+<link rel="canonical" href="https://jacobc.us/posts/newportblakectf-writeups/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://jacobc.us/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://jacobc.us/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://jacobc.us/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://jacobc.us/apple-touch-icon.png">
+<link rel="mask-icon" href="https://jacobc.us/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2W1QLCQZ5"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-Q2W1QLCQZ5', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="NewportBlakeCTF Writeups" />
+<meta property="og:description" content="Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.
+I mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I&rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jacobc.us/posts/newportblakectf-writeups/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-11T17:43:04-08:00" />
+<meta property="article:modified_time" content="2023-12-11T17:43:04-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NewportBlakeCTF Writeups"/>
+<meta name="twitter:description" content="Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.
+I mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I&rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://jacobc.us/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "NewportBlakeCTF Writeups",
+      "item": "https://jacobc.us/posts/newportblakectf-writeups/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NewportBlakeCTF Writeups",
+  "name": "NewportBlakeCTF Writeups",
+  "description": "Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.\nI mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I\u0026rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.\nI mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I’ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer.\nLinkedout 1-2-3 I’ll start out with a confession. The Linkedout Challenge that was used during the actual competition wasn’t the original Linkedout I created. I came upon the idea of a LinkedIn challenge over summer when we just started brainstorming challenges. I finished making the LinkedIn and brainstorming challenges. Everything was going smoothly. Then I made one small mistake. I forgot to hibernate the profile.\nSkip to 2 months later. While talking with friends on other CTF teams (View Source and Les Amateurs), they decided to randomly google “Newport Blake”. Lo and behold, the top result, the public Linkedin I made. Laid barren for everyone to see (and find the hidden flags). Even worse, they found the original flags for Linkedout 3. (I thought it was a pretty creative idea)\nHere’s the assets for the challenge that I created with an expired student photoshop license. Let’s see if you can figure out what the idea behind the challenge was.\nIn case it wasn’t clear, here’s what a default LinkedIn user profile looks like:\nThe idea was to use Linkedin’s circular frame, along with the positioning of the profile picture to cover up parts of the flag. It was a pretty creative idea, so it’s a shame that we couldn’t use it, but the experience also taught me a valuable lesson.\nHide your Osint Challenges\nNow with the backstory out of the way, let’s start diving into the actual challenges.\nEthos Linkedin has always been interesting to me. In many ways, it’s just social media for Adults. It’s got the same core features as any other social networking app, but with a corporate spin. That sense of professionalism feels quite interwoven with Linkedin’s brand image. Like many others, my school has its own blacklist. Basically every social media website is (rightfully) blocked, everyone except Linkedin. For some reason, its professional image lets it escape stringent regulation. At the same time, I feel that’s a bit ironic. While certainly having educational value, its features like comments, liking, sharing, following… make it feel like any other Social Media app, just instead of clickbait fake giveaways, it’s engagement bait promising internship leads.\nSo that brings me to why I decided to make an Osint Challenge on Linkedin. It’s definitely not the first time someone’s done this, far from it. One of the first CTFs I played in, RITSEC CTF, had a Linkedin Challenge. At the same time, I thought it was funny how so many people post tons of incriminating personal information on Linkedin. Something about its “professional” atmosphere turns off people’s basic sense of web security. (Something I’m not proud to say I’ve also been guilty of) Making a Linkedin Challenge based around finding information that so many people readily give away in an effort to be “employable” felt fitting.\nI’d also say the design limitations of Linkedin gave me a fun platform to work with. There’s really only so much you can do on Linkedin, so making creative challenges with those design constraints felt like an interesting opportunity. It presented an opportunity to be creative, but also as I’ll discuss later, lead to some unforeseen lessons.\nLinkedout 1 This was supposed to be the easiest challenge (And by solve count, it definitely was). If you looked on the profile for a bit, under projects, you’d find a project that this person was working on. “Flag Designer for Newport Blake CTF”. Hopefully that got yall a bit interested.\nFollow the link, and you’re taken to an Imgur image.\nHopefully its obvious where to go next. The Imgur title looks a bit off… Plugging it into cyberchef will give you another Imgur link, where if you scroll to the bottom… your flag awaits.\nOverall, very simple and I’m glad everyone was able to get through this one with relative ease.\nLinkedout 2 Oh boy. Where do I start with this one. This challenge was probably responsible for 10% of all support tickets we received. If you had me look back objectively, it was most definitely a bad challenge. But it’s in the suckiness of the challenge that also taught me the most.\nThe challenge was supposed to be easy. A simple OSINT Challenge, based around finding the location of an image. I’d visited UPenn’s Campus a couple times, so I decided to edit an Image I had from my camera reel.\nThere’s supposed to be an internal joke with the photo as well. The actual image is of “Ben on a Bench”. During my college tour, there’s apparently a tradition for students to get drunk and pee on the statue. A lot of people don’t know that when they visit campus, and they take pictures sitting on the Ben Statue. I thought it’d be funny to get a fellow organizer (Kroot) to join in on that tradition.\nIn terms of the actual challenge, you were supposed to find that location, go to what3words, and find the closest intersection.\nA LOT of people did not know that they were supposed to use What3Words. And herein lies the fundamental design flaw of the challenge to me. The difficult part of the challenge wasn’t the actual Osint, but rather figuring out flag submissions. I (mistakenly) thought the hint “What three words would give that location” was explicit enough, but it clearly wasn’t.\nWhen I was designing the challenge, I’d done a lot of guessy What3Word challenges, so I tried my best to avoid it becoming guessCTF. First, the location was the nearest intersection, rather than the actual location. This was to prevent having to manually check a bunch of possible options. I also tried to further hint that it was What3Words with the description “Flag Format is nbCTF{xxxx.xxxx.xxxx}”. Since What3Words separates it’s various words with dots.\nOne thing I felt interesting, was the overall feedback. Some of the more experienced CTFers were some of the largest detractors to the fact that What3Words was not explicitly mentioned. (In my defense, if you copied the hint into google, What3Words is the first result). For the new members that I talked to, most were all relatively chill with it not being explicitly mentioned.\nOverall, I do agree with the criticism. It was originally a funny idea, but the implementation was mostly flawed. Most of the lessons in the takeaways section can probably be attributed at least in some way to this challenge.\nLinkedout 3 This challenge was the replacement for the previously exposed challenge. When I was making the challenge, I thought it would be harder than it turned out to be. Most people spotted it out pretty quick.\nBy default, Linkedin throws a bunch of random hex junk after your username, but it also allows you to customize the url. Playing around with that, you get https://www.linkedin.com/in/newport-blake-ctf6e626374667b4431645f7930755f537030745f31743f7d/. The keen eyed may have spotted out the first three words spelling Newport Blake CTF, the start of all flags. From there, a simple hex decode from the rest of the rest of the URL will get you the flag.\nThis challenge overall went pretty smoothly. I was really trying to see if you would notice that Linkedin lets you set custom URLs.\nBabbling About I really liked writing this challenge. The inspiration for it actually came to me during class 2 days before the CTF. The premise is simple.\nA monkey with a typewriter will eventually type out the works of Shakespeare. Funny thought experiment for sure, but it also got me thinking. It can type anything… even a flag?. Fortunately, through my random times on the internet, I’d stumbled upon an online version. That random piece of information lay dormant, until I needed it years later. To make a CTF challenge! The website doesn’t explicitly mention the monkey problem, rather the book of babel. (I hope you see where the name comes from)\nThe library of babel is an interesting thought experiment, a little beyond my reach in terms of philosophy, but I do recommend giving the about page a read some time, it’s quite interesting if I say so myself.\nEnough random chit chat. The idea was pretty simple, you were given enough information to find a single page in the library of babel. From there, there was a flag on that page. For your convenience (and my sanity troubleshooting support tickets) we chose a flag that was easily identifiable.\nWe even mentioned in the hints to use this flag format. I think that level of specificity and looking forward definitely helped this challenge run smoothly. Contrary to Linkedout2, we had no support tickets relating to flag submission (while with Linkedout 2, we got so many tickets that it became a running joke).\nA simple challenge that I’m surprised isn’t more common. But I suppose if it was, there’d be even less of a point in doing it.\nInspector Gadget What’s a CTF without a good ol flag finder challenge. As an homage to my first ever web chall, Inspector on PicoCTF, I created Inspector gadget! I will duly admit, although I’ve watched a couple episodes as a kid, I never was a die-hard fan. You can’t completely blame me though…\nI don’t have cable.\nAnyways, the flag was broken down into 4 parts, first was hidden on the main page in a comment. The second part was hidden in the title of one of the sections, the third was in robots.txt, and the last was on a hidden page named “supersecrettopsecret.txt”. Once you inspected the page, you might notice something was off.\nWhy did the author define a bunch of scripts to change pages? you might wonder. Well it allows me to sneak in a little function at the bottom, that hints at another page. That function is never called, but it gives you enough information to solve the challenge.\nAlso, in case you were curious, yes ChatGPT wrote all the descriptions of his various tools. I aint writing that much about the “gadget arms”.\nI suppose my main takeaway from this challenge was to get a bit creative. As unsurprising as it might sound, a lot of people simply ctrl f “flag” and went on their merry way (to be fair, I can’t really blame them. What did I expect.) That being said, I would’ve liked it to be a bit more interesting. Small things like removing the words flag so searching won’t give you the exact part that you need.\nMaybe that’s what I’ll do for Inspector Gadget’s Revenge next year…\nCue ominous music Takeaways I’ll summarize into a couple takeaways. In part to help any aspiring challenge designer, but most likely to help future me when I start designing challenges for next year.\nAdd More Red Herrings Sometimes if there’s only one path to take, the challenge is quite logical. Linkedout 1 kinda suffered with that issue. There inherently aren’t a lot of things you can do with Linkedin. Even when we tried to get creative with the URL, that was about the most obscure thing we could do. I’m sure there are some other things out there that I overlooked, but the overall straight forwardness of Linkedin (It is a professional website after all) means that it probably shouldn’t have been a three-part challenge. Making sure there’s enough possible answers, and an interesting attack surface is important, especially for Osint challenges.\nMake the Difficulty Intuitive I will admit, as these were the first challenges I have ever written, sometimes it’s hard to gauge how difficult certain challenges are. I think it’s fine if a challenge is a bit easier than expected (To be honest, I thought persona was going to be more challenging than it actually was). But an easy challenge should be relatively easy. Especially for individuals who are just getting into CTFs, making sure that the difficulty is logical, and relatively consistent should be something to keep in the back of your mind when designing challenge difficulty.\nAccount for Various Interpretations This is mainly a thing with the “Infamous” Linkedout 2. I think I had to tweak the challenge description twice because of what I thought was intuitive wasn’t as obvious for others as I originally thought. Sometimes those subconscious assumptions that we as challenge authors make (after all, we may assume others have as much familiarity with the vulnerability that we do) can make challenges harder than they have to be.\nIt’s Ok To Make Things Harder Than They Might Seem at First Glance I know this seems like it might contradict point number 2, but I think it’s more of a modifier. As a challenge author, it’s hard to strike a balance of difficult, not guessy, and challenging for others. You want individuals to learn from your challenge and gain some applicable skills that they can use in other CTFs or life in general. It’s ok to make your challenges a bit more difficult to push people to learn about various concepts.\n",
+  "wordCount" : "2258",
+  "inLanguage": "en",
+  "datePublished": "2023-12-11T17:43:04-08:00",
+  "dateModified": "2023-12-11T17:43:04-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jacobc.us/posts/newportblakectf-writeups/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jacob's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jacobc.us/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top"><head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2W1QLCQZ5"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-Q2W1QLCQZ5', { 'anonymize_ip': false });
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-Q2W1QLCQZ5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://jacobc.us/" accesskey="h" title="Jacob&#39;s Blog (Alt + H)">Jacob&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://jacobc.us/">Home</a>&nbsp;»&nbsp;<a href="https://jacobc.us/posts/">Posts</a></div>
+    <h1 class="post-title">
+      NewportBlakeCTF Writeups
+    </h1>
+    <div class="post-meta"><span title='2023-12-11 17:43:04 -0800 PST'>December 11, 2023</span>&nbsp;·&nbsp;11 min
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>December 1st 4 PM PST through December 3rd 5 PM PST. Those were the dates of our first cybersecurity competition. I was fortunate enough to have the opportunity to write a couple challenges for NewportBlake CTF and work with some of the most passionate and talented high schoolers out there.</p>
+<p>I mainly focused on writing Osint challenges, but I also wrote the introductory web challenge. Overall, this post hopes to discuss a bit of my thought process when making the various challenges, the things I&rsquo;ve learned and finally end on a note of looking towards the future as a CTF player and a chall designer.</p>
+<h1 id="linkedout-1-2-3">Linkedout 1-2-3<a hidden class="anchor" aria-hidden="true" href="#linkedout-1-2-3">#</a></h1>
+<p>I&rsquo;ll start out with a confession. The Linkedout Challenge that was used during the actual competition wasn&rsquo;t the original Linkedout I created. I came upon the idea of a LinkedIn challenge over summer when we just started brainstorming challenges. I finished making the LinkedIn and brainstorming challenges. Everything was going smoothly. Then I made one small mistake. I forgot to hibernate the profile.</p>
+<p>Skip to 2 months later. While talking with friends on other CTF teams (View Source and Les Amateurs), they decided to randomly google &ldquo;Newport Blake&rdquo;. Lo and behold, the top result, the public Linkedin I made. Laid barren for everyone to see (and find the hidden flags). Even worse, they found the original flags for Linkedout 3. (I thought it was a pretty creative idea)</p>
+<p>Here&rsquo;s the assets for the challenge <del>that I created with an expired student photoshop license</del>. Let’s see if you can figure out what the idea behind the challenge was.</p>
+<p><img loading="lazy" src="./PFP.jpg" alt="Linkedout1PFP"  />
+</p>
+<p><img loading="lazy" src="./Linkedout_1_Background.jpg" alt="Linkedout1Background"  />
+</p>
+<p>In case it wasn&rsquo;t clear, here&rsquo;s what a default LinkedIn user profile looks like:</p>
+<p><img loading="lazy" src="./Linkedin.PNG" alt="GeneralLinkedinBackground"  />
+</p>
+<p>The idea was to use Linkedin&rsquo;s circular frame, along with the positioning of the profile picture to cover up parts of the flag. It was a pretty creative idea, so it&rsquo;s a shame that we couldn&rsquo;t use it, but the experience also taught me a valuable lesson.</p>
+<p><strong>Hide your Osint Challenges</strong></p>
+<p>Now with the backstory out of the way, let’s start diving into the actual challenges.</p>
+<h2 id="ethos">Ethos<a hidden class="anchor" aria-hidden="true" href="#ethos">#</a></h2>
+<p>Linkedin has always been interesting to me. In many ways, it&rsquo;s just social media for Adults. It’s got the same core features as any other social networking app, but with a corporate spin. That sense of professionalism feels quite interwoven with Linkedin&rsquo;s brand image. Like many others, my school has its own blacklist. Basically every social media website is (rightfully) blocked, everyone except Linkedin. For some reason, its professional image lets it escape stringent regulation. At the same time, I feel that&rsquo;s a bit ironic. While certainly having educational value, its features like comments, liking, sharing, following&hellip; make it feel like any other Social Media app, just instead of clickbait fake giveaways, it&rsquo;s engagement bait promising internship leads.</p>
+<p>So that brings me to why I decided to make an Osint Challenge on Linkedin. It&rsquo;s definitely not the first time someone&rsquo;s done this, far from it. One of the first CTFs I played in, RITSEC CTF, had a Linkedin Challenge. At the same time, I thought it was funny how so many people post tons of incriminating personal information on Linkedin. Something about its &ldquo;professional&rdquo; atmosphere turns off people’s basic sense of web security. (Something I&rsquo;m not proud to say I&rsquo;ve also been guilty of) Making a Linkedin Challenge based around finding information that so many people readily give away in an effort to be &ldquo;employable&rdquo; felt fitting.</p>
+<p>I&rsquo;d also say the design limitations of Linkedin gave me a fun platform to work with. There&rsquo;s really only so much you can do on Linkedin, so making creative challenges with those design constraints felt like an interesting opportunity. It presented an opportunity to be creative, but also as I&rsquo;ll discuss later, lead to some unforeseen lessons.</p>
+<h2 id="linkedout-1">Linkedout 1<a hidden class="anchor" aria-hidden="true" href="#linkedout-1">#</a></h2>
+<p>This was supposed to be the easiest challenge (And by solve count, it definitely was). If you looked on the profile for a bit, under projects, you&rsquo;d find a project that this person was working on. &ldquo;Flag Designer for Newport Blake CTF&rdquo;. Hopefully that got yall a bit interested.</p>
+<p><img loading="lazy" src="./FlagDesigner.PNG" alt="LinkedOut1FlagDesigner"  />
+</p>
+<p>Follow the link, and you&rsquo;re taken to an <a href="https://imgur.com/a/pGwm2Mg/">Imgur</a> image.</p>
+<p><img loading="lazy" src="./Imgur.PNG" alt="Imgur"  />
+</p>
+<p>Hopefully its obvious where to go next. The Imgur title looks a bit off&hellip; Plugging it into cyberchef will give you another Imgur link, where if you scroll to the bottom&hellip; your flag awaits.</p>
+<p>Overall, very simple and I&rsquo;m glad everyone was able to get through this one with relative ease.</p>
+<h2 id="linkedout-2">Linkedout 2<a hidden class="anchor" aria-hidden="true" href="#linkedout-2">#</a></h2>
+<p>Oh boy. Where do I start with this one. This challenge was probably responsible for 10% of all support tickets we received. If you had me look back objectively, it was most definitely a bad challenge. But it&rsquo;s in the suckiness of the challenge that also taught me the most.</p>
+<p>The challenge was supposed to be easy. A simple OSINT Challenge, based around finding the location of an image. I&rsquo;d visited UPenn&rsquo;s Campus a couple times, so I decided to edit an Image I had from my camera reel.</p>
+<p>There&rsquo;s supposed to be an internal joke with the photo as well. The actual image is of &ldquo;Ben on a Bench&rdquo;. During my college tour, there&rsquo;s apparently a tradition for students to get drunk and pee on the statue. A lot of people don&rsquo;t know that when they visit campus, and they take pictures sitting on the Ben Statue. I thought it&rsquo;d be funny to get a fellow organizer (Kroot) to join in on that tradition.</p>
+<p>In terms of the actual challenge, you were supposed to find that location, go to what3words, and find the closest intersection.</p>
+<p>A LOT of people did not know that they were supposed to use What3Words. And herein lies the fundamental design flaw of the challenge to me. The difficult part of the challenge wasn&rsquo;t the actual Osint, but rather figuring out flag submissions. I (mistakenly) thought the hint &ldquo;What three words would give that location&rdquo; was explicit enough, but it clearly wasn&rsquo;t.</p>
+<p>When I was designing the challenge, I&rsquo;d done a lot of guessy What3Word challenges, so I tried my best to avoid it becoming guessCTF. First, the location was the nearest intersection, rather than the actual location. This was to prevent having to manually check a bunch of possible options. I also tried to further hint that it was What3Words with the description &ldquo;Flag Format is nbCTF{xxxx.xxxx.xxxx}&rdquo;. Since What3Words separates it&rsquo;s various words with dots.</p>
+<p>One thing I felt interesting, was the overall feedback. Some of the more experienced CTFers were some of the largest detractors to the fact that What3Words was not explicitly mentioned. (In my defense, if you copied the hint into google, What3Words is the first result). For the new members that I talked to, most were all relatively chill with it not being explicitly mentioned.</p>
+<p>Overall, I do agree with the criticism. It was originally a funny idea, but the implementation was mostly flawed. Most of the lessons in the takeaways section can probably be attributed at least in some way to this challenge.</p>
+<h2 id="linkedout-3">Linkedout 3<a hidden class="anchor" aria-hidden="true" href="#linkedout-3">#</a></h2>
+<p>This challenge was the replacement for the previously exposed challenge. When I was making the challenge, I thought it would be harder than it turned out to be. Most people spotted it out pretty quick.</p>
+<p>By default, Linkedin throws a bunch of random hex junk after your username, but it also allows you to customize the url. Playing around with that, you get <a href="https://www.linkedin.com/in/newport-blake-ctf6e626374667b4431645f7930755f537030745f31743f7d/">https://www.linkedin.com/in/newport-blake-ctf6e626374667b4431645f7930755f537030745f31743f7d/</a>. The keen eyed may have spotted out the first three words spelling <strong>N</strong>ewport <strong>B</strong>lake <strong>CTF</strong>, the start of all flags. From there, a simple hex decode from the rest of the rest of the URL will get you the flag.</p>
+<p>This challenge overall went pretty smoothly. I was really trying to see if you would notice that Linkedin lets you set custom URLs.</p>
+<h1 id="babbling-about">Babbling About<a hidden class="anchor" aria-hidden="true" href="#babbling-about">#</a></h1>
+<p>I really liked writing this challenge. The inspiration for it actually came to me during class 2 days before the CTF. The premise is simple.</p>
+<pre tabindex="0"><code>A monkey with a typewriter will eventually type out the works of Shakespeare.
+</code></pre><p>Funny thought experiment for sure, but it also got me thinking. It can type anything&hellip; <em><strong>even a flag?</strong></em>. Fortunately, through my random times on the internet, I&rsquo;d stumbled upon an online version. That random piece of information lay dormant, until I needed it years later. To make a CTF challenge! The website doesn&rsquo;t explicitly mention the monkey problem, rather the book of babel. (I hope you see where the name comes from)</p>
+<p>The library of babel is an interesting thought experiment, a little beyond my reach in terms of philosophy, but I do recommend giving the <a href="https://libraryofbabel.info/About.html">about page</a> a read some time, it&rsquo;s quite interesting if I say so myself.</p>
+<p>Enough random chit chat. The idea was pretty simple, you were given enough information to find a single page in the library of babel. From there, there was a flag on that page. For your convenience (and my sanity troubleshooting support tickets) we chose a flag that was easily identifiable.</p>
+<p><img loading="lazy" src="./BabblingAbout.png" alt="BabblingAboutFlag"  />
+</p>
+<p>We even mentioned in the hints to use this flag format. I think that level of specificity and looking forward definitely helped this challenge run smoothly. Contrary to Linkedout2, we had no support tickets relating to flag submission (while with Linkedout 2, we got so many tickets that it became a running joke).</p>
+<p>A simple challenge that I&rsquo;m surprised isn&rsquo;t more common. But I suppose if it was, there&rsquo;d be even less of a point in doing it.</p>
+<h1 id="inspector-gadget">Inspector Gadget<a hidden class="anchor" aria-hidden="true" href="#inspector-gadget">#</a></h1>
+<p>What&rsquo;s a CTF without a good ol flag finder challenge. As an homage to my first ever web chall, Inspector on PicoCTF, I created Inspector gadget! I will duly admit, although I&rsquo;ve watched a couple episodes as a kid, I never was a die-hard fan. You can&rsquo;t completely blame me though&hellip;</p>
+<p>I don&rsquo;t have cable.</p>
+<p>Anyways, the flag was broken down into 4 parts, first was hidden on the main page in a comment. The second part was hidden in the title of one of the sections, the third was in robots.txt, and the last was on a hidden page named &ldquo;supersecrettopsecret.txt&rdquo;. Once you inspected the page, you might notice something was off.</p>
+<p><img loading="lazy" src="./InspectorGadget.png" alt="InspectorGadget"  />
+</p>
+<p><em>Why did the author define a bunch of scripts to change pages?</em> you might wonder. Well it allows me to sneak in a little function at the bottom, that hints at another page. That function is never called, but it gives you enough information to solve the challenge.</p>
+<p>Also, in case you were curious, yes ChatGPT wrote all the descriptions of his various tools. I aint writing that much about the &ldquo;gadget arms&rdquo;.</p>
+<p>I suppose my main takeaway from this challenge was to get a bit creative. As unsurprising as it might sound, a lot of people simply ctrl f “flag” and went on their merry way (to be fair, I can&rsquo;t really blame them. What did I expect.) That being said, I would&rsquo;ve liked it to be a bit more interesting. Small things like removing the words flag so searching won&rsquo;t give you the exact part that you need.</p>
+<p><em>Maybe that&rsquo;s what I&rsquo;ll do for Inspector Gadget&rsquo;s Revenge next year&hellip;</em></p>
+<pre tabindex="0"><code>Cue ominous music
+</code></pre><h1 id="takeaways">Takeaways<a hidden class="anchor" aria-hidden="true" href="#takeaways">#</a></h1>
+<p>I&rsquo;ll summarize into a couple takeaways. In part to help any aspiring challenge designer, but most likely to help future me when I start designing challenges for next year.</p>
+<h2 id="add-more-red-herrings">Add More Red Herrings<a hidden class="anchor" aria-hidden="true" href="#add-more-red-herrings">#</a></h2>
+<p>Sometimes if there&rsquo;s only one path to take, the challenge is quite logical. Linkedout 1 kinda suffered with that issue. There inherently aren’t a lot of things you can do with Linkedin. Even when we tried to get creative with the URL, that was about the most obscure thing we could do. I&rsquo;m sure there are some other things out there that I overlooked, but the overall straight forwardness of Linkedin (It is a professional website after all) means that it probably shouldn&rsquo;t have been a three-part challenge. Making sure there&rsquo;s enough possible answers, and an interesting attack surface is important, especially for Osint challenges.</p>
+<h2 id="make-the-difficulty-intuitive">Make the Difficulty Intuitive<a hidden class="anchor" aria-hidden="true" href="#make-the-difficulty-intuitive">#</a></h2>
+<p>I will admit, as these were the first challenges I have ever written, sometimes it’s hard to gauge how difficult certain challenges are. I think it&rsquo;s fine if a challenge is a bit easier than expected (To be honest, I thought persona was going to be more challenging than it actually was). But an easy challenge should be relatively easy. Especially for individuals who are just getting into CTFs, making sure that the difficulty is logical, and relatively consistent should be something to keep in the back of your mind when designing challenge difficulty.</p>
+<h2 id="account-for-various-interpretations">Account for Various Interpretations<a hidden class="anchor" aria-hidden="true" href="#account-for-various-interpretations">#</a></h2>
+<p>This is mainly a thing with the &ldquo;Infamous&rdquo; Linkedout 2. I think I had to tweak the challenge description twice because of what I thought was intuitive wasn&rsquo;t as obvious for others as I originally thought. Sometimes those subconscious assumptions that we as challenge authors make (after all, we may assume others have as much familiarity with the vulnerability that we do) can make challenges harder than they have to be.</p>
+<h2 id="its-ok-to-make-things-harder-than-they-might-seem-at-first-glance">It&rsquo;s Ok To Make Things Harder Than They Might Seem at First Glance<a hidden class="anchor" aria-hidden="true" href="#its-ok-to-make-things-harder-than-they-might-seem-at-first-glance">#</a></h2>
+<p>I know this seems like it might contradict point number 2, but I think it&rsquo;s more of a modifier. As a challenge author, it&rsquo;s hard to strike a balance of difficult, not guessy, and challenging for others. You want individuals to learn from your challenge and gain some applicable skills that they can use in other CTFs or life in general. It&rsquo;s ok to make your challenges a bit more difficult to push people to learn about various concepts.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://jacobc.us/posts/jacobhottakes1/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Debunking the Myths of Summer College Prep Programs: Are they Really Worth It?</span>
+  </a>
+  <a class="next" href="https://jacobc.us/posts/wharton-global-youth-my-experience/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Wharton Global Youth My Experience</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on twitter"
+        href="https://twitter.com/intent/tweet/?text=NewportBlakeCTF%20Writeups&amp;url=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f&amp;hashtags=">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f&amp;title=NewportBlakeCTF%20Writeups&amp;summary=NewportBlakeCTF%20Writeups&amp;source=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f&title=NewportBlakeCTF%20Writeups">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on whatsapp"
+        href="https://api.whatsapp.com/send?text=NewportBlakeCTF%20Writeups%20-%20https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share NewportBlakeCTF Writeups on telegram"
+        href="https://telegram.me/share/url?text=NewportBlakeCTF%20Writeups&amp;url=https%3a%2f%2fjacobc.us%2fposts%2fnewportblakectf-writeups%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://jacobc.us/">Jacob&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
