@@ -13,9 +13,8 @@
       <pubDate>Mon, 20 May 2024 18:59:37 -0700</pubDate>
       
       <guid>https://jacobc.us/posts/tjctf24-crypto-writeups/</guid>
-      <description>This past weekend, I competed in TJ CTF 2024 with my friends at Slith3r. It was a pretty fun CTF although I wasn&amp;rsquo;t able to spend the full time focused on the competition. I&amp;rsquo;m just going to be writing about 2 of the Crypto challenges and the overall thought process when solving them.
-Weird-Crypto [151 solves, 118 points] Here&amp;rsquo;s the given source code
-from math import lcm from Crypto.Util.number import bytes_to_long, getPrime with open(&amp;#39;flag.</description>
+      <description>Weird-Crypto [151 solves, 118 points] Hulksmash [23 solves, 229 points] This past weekend, I competed in TJ CTF 2024 with my friends at Slith3r. It was a pretty fun CTF although I wasn&amp;rsquo;t able to spend the full time focused on the competition. I&amp;rsquo;m just going to be writing about 2 of the Crypto challenges and the overall thought process when solving them.
+Weird-Crypto [151 solves, 118 points] Here&amp;rsquo;s the given source code</description>
     </item>
     
     <item>
