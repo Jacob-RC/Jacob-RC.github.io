@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Jacob&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 18:59:37 -0700</lastBuildDate><atom:link href="https://jacobc.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Jul 2024 14:15:55 -0700</lastBuildDate><atom:link href="https://jacobc.us/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Case for Business and Computer Science</title>
+      <link>https://jacobc.us/posts/the-case-for-business-and-computer-science/</link>
+      <pubDate>Sun, 14 Jul 2024 14:15:55 -0700</pubDate>
+      
+      <guid>https://jacobc.us/posts/the-case-for-business-and-computer-science/</guid>
+      <description>What draws me to each? For those interested in business, why you should also try out engineering For engineers, why business is also important Conclusion It seems pretty counterintuitive to talk about the junction of business and computer science. No two disciplines seem to be more at odds with each other than these two. As someone whose grown up interested in business and who has an older brother studying computer science, I&amp;rsquo;ve probably heard most common insults at least once at our dinner table.</description>
+    </item>
+    
     <item>
       <title>TJCTF24 Crypto Writeups</title>
       <link>https://jacobc.us/posts/tjctf24-crypto-writeups/</link>
