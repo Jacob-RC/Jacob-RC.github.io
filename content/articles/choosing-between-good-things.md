@@ -5,7 +5,7 @@ date: "2026-11-26"
 
 One of the hardest things I’ve been learning to do the past couple of years, is to learn how to let go of good things. In many ways, I feel that choosing between good things can almost make me wish that I didn’t have that many options in the first place and only have one choice.
 
-And this is something that I’ve thought about a lot recently. For some context, I never really had to choose between good things seriously until this year. For the first time in my life, I’m making decisions that are short term committing. I’m also reckoning with the question of what do I want to do in life and what type of career is right for me. Do I want to continue to pursue a path in quant, or should I give up an offer from Jane Street and pursue startups, something else that I’m passionate in. 
+And this is something that I’ve thought about a lot recently. For some context, I never really had to choose between good things seriously until this year. For the first time in my life, I’m making decisions that are short term committing. I’m also reckoning with the question of what do I want to do in life and what type of career is right for me. Do I want to continue to pursue a path in quant, or should I give up an offer from Jane Street and pursue something else I’m passionate in, like startups.
 
 ## Optionality
 
@@ -17,29 +17,33 @@ I think for most who were from an academically rigorous environment can relate t
 
 I think I only started realizing this when during my freshman year, a friend had shared [a Harvard thought piece](https://www.thecrimson.com/article/2017/5/25/desai-commencement-ed/) on optionality and also how it was can be a trap. Now I don’t think that maximizing optionality is inherently wrong, but I do think that ending the pursuit at optionality is wrong. Optionality is good in so far as it serves a purpose. Options are beneficial if you have some internal metric to choose between them, but I think all too often its seen as the end goal itself. IE people value having options because having more options is better than having less (which is fair), and then choose to focus on maximizing the number of options they have available to them.
 
-I do really think the Harvard piece is good read why we also choose to perhaps focus too much on existing at a state where we hold onto a lot of options. In essence, options expose you to the benefit of a decision without the downside of the decision. Having the option to join the company is nice because if the company succeeds, you can join and be part of a unicorn. If the company goes down, well you can choose to not exercise that option and not be part of a sinking ship. 
+I do really think the Harvard piece is a really good read and helps to answer why we also choose to perhaps focus too much on focusing too much on holding onto a lot of options. In essence, options expose you to the benefit of a decision without the downside of the decision. Having the option to join the company is nice because if the company succeeds, you can join and be part of a unicorn. If the company goes down, well you can choose to not exercise that option and not be part of a sinking ship. 
 
 ## Lost Pursuit
 
-So I think it’s very natural for us as risk averse individuals to focus on maximizing optionality. We get the benefit without exposing ourselves to the potential harms. But in that exercise, where the goal is to maximize the number of options, I feel like it leads to a false pursuit, one that produces more harms than benefits.
+So I think it’s very natural for us as risk averse individuals to focus on maximizing optionality. We get the benefit without exposing ourselves to the potential harms. But in that exercise, where the goal is to maximize the number of options, I feel like it leads to a false pursuit; where the goals being chased are no longer the ones that we originally started with.
 
 ### Delaying Exploration
 
-One thing I see a lot when I talk to my friends in banking, is the reason they’re going into investment banking is to stick in it for 2 years and then pivot out to buy side in a career like venture capital, private equity etc. And while it might be necessary in some ways (in that like PE doesn’t recruit that many people out of undergrad), I can’t help but feel like theres a sense of delaying the end goal in favor of maximizing optionality. 
+One thing I see a lot when I talk to my friends in banking, is the reason they’re going into investment banking is to stick in it for 2 years and then pivot out to a buy side role like venture capital, private equity etc. And while it might be necessary in some ways (in that like PE doesn’t recruit that many people out of undergrad), I can’t help but feel like theres a sense of delaying the end goal in favor of maximizing optionality. 
 
-More generally, I would imagine that most people have some set of beliefs about who they are as people and their goals in life. Lets for example say make it onto broadway. In my opinion, the way to understand if that goal is right for you is to run headfirst at it. As my friend Kevin Xu put it once, “attempt to (in)validate the null hypothesis”. If the end goal becomes put behind other intermediary goals, I think its easy to get distracted from validating/invalidating beliefs about ourselves. For the person who wants to make it onto broadway, working at a stable job to maximize their income will not get them any closer to determining if broadway is what they want to do in life.
+More generally, I would imagine that most people have some set of beliefs about who they are as people and their goals in life. Lets for example say make it onto broadway. In my opinion, the way to understand if that goal is right for you is to run headfirst at it. As my friend Kevin Xu put it once, “attempt to (in)validate the null hypothesis”. If the end goal gets put behind other intermediary goals, I think its easy to get distracted from validating/invalidating beliefs about ourselves. For the person who wants to make it onto broadway, working at a stable job to maximize their income will not get them any closer to determining if broadway is what they want to do in life.
 
 And so I can’t help but wonder, at what point is maximizing optionality by pursing things like banking delaying the ability to actually pursue your actual goals.
 
 ### Learning To Make Hard Decisions
 
-Perhaps tied to the original premise of this article, but maximizing optionality is by definition, avoiding making decisions. By choosing to focus on having a lot of options, it means not picking any single one to stick with. And the mentality of focusing on having more options is what gets us to the difficulty in making decisive decisions in the first place.
+Perhaps tied to the original premise of this article, but maximizing optionality is by definition, avoiding making decisions. By choosing to focus on having a lot of options, it means not picking any single one to stick with. And the mentality of focusing on having more options is what makes it hard to make decisive decisions in the first place. 
+
+But life is about making decisions. Whether right or wrong in retrospect, the decisions that you’ve made have brought you to where you’re at in life now. Life is ultimately about making these decisions.
 
 ## Big Schools and Opportunities
 
-Ok. I’ve spent a long time now talking about the downsides of optionality, but I also want to give it a fair credence. I think the problems with optionality are first world of first world. One can only complain about optionality once they have a lot of options; a luxury in and of itself. 
+Ok. I’ve spent a long time now talking about the downsides of optionality, but I also want to give it a fair credence. I think the problems with optionality are first world of first world. One can only complain about optionality once they have a lot of options; a luxury in and of itself. And I recognize that the luxury of choice is not broadly applicable. 
 
-One of the things that I think that I learned early on at Michigan was that you had to fight for opportunities. Maybe not in a direct 1v1 kind of sense, but nobody is handing out freebies at a state school. For things like internship opportunities, events, clubs, they all take effort to apply to and get. I think my freshman year I had the mentality of saying yes to everything because I never knew what might end up materializing into something else. It was that mentality that pushed me to put myself out there a lot, and what ultimately allowed me to be in the position where I am now. So when I talk to people going into college, I do think part of the advice is to say yes to everything, because you really won’t know what you’ll like until after you say yes to a lot of things. And the attitude of saying yes to a lot of things will get you towards success better than being uber selective about the things you say yes to.
+One of the things that I think that I learned early on at Michigan was that you had to fight for opportunities. Maybe not in a 1v1 brawl kind of sense, but also nobody is handing out freebies at a state school. For things like internship opportunities, events, clubs, they all take effort to apply to and get, and are also competitive by nature. And I think in that environment where I was getting rejection after rejection, I started to develop a mentality of saying yes to everything. 
+
+It was that mentality that pushed me to put myself out there a lot, and what ultimately allowed me to be in the position where I am now. I applied to Roblox my freshman year because they had some recruiting event on north campus on a Thursday evening. I had nothing better to do so I applied for fun. That random recruiting event was what convinced me to apply and what ultimately allowed me to get my freshman year internship. So when I talk to people going into college, I do think part of the advice is to say yes to everything, because you really won’t know what you’ll like until after you say yes to a lot of things. And the attitude of saying yes to a lot of things will get you towards success better than being uber selective about the things you say yes to.
 
 I do think big schools do a really good job of teaching you that from the get go. And in many ways, I think it’s an important lesson. Optionality is something that you need to fight for. To have options in an environment where options are not given out necessitates some amount of effort to have been put in. I think in my life, putting that effort in is a prerequisite to later be able to have this more nuanced view towards optionality. 
 
@@ -95,17 +99,17 @@ Now I won’t do an actual literary analysis of the poem, although there’s ple
 
 Mulling over this, I do think it’s helped me get a sense of peace. That not every small decision I make has to be perfect. I might be giving up a theoretically “better” choice, but that’s part of life and something that should be accepted instead of avoided.
 
-I think in a lot of things, the only wrong choice is to not make a decision. For me right now, that decision means picking and choosing to join a startup. That may cause to have realizations that down the line will then make it so that I give up other opportunities, but I think that’s worthwhile towards pursuing my goals.
+I think in a lot of things, the only wrong choice is to not make a decision. For me right now, that decision means picking and choosing to join a startup. That may then cause me to have realizations that down the line that will then make it so that I give up other opportunities, but I think that’s worthwhile towards pursuing my goals.
 
 ## The Windy Path of Life
 
-Very related was a realization I had recently during ironically enough a coffee chat. Or perhaps more accurately, a saying that I captures how I feel pretty well; 
+Very related was a realization I had recently, during ironically enough a coffee chat. Or perhaps more accurately, a saying that I captures how I feel pretty well; 
 
 “The shortest path is often not the correct path”
 
 I think in a lot of ways, we conflate the correct path between points A and B as the shortest path. If point A is where I’m at right now and point B is some goal I have, like discovering what I want to do in life, it’s pretty easy to think that the shortest path, IE getting a job, doing leetcode etc is the correct one. But in a lot of cases, the windy path is the more useful one. A random sidequest that allows you to explore something you *might* be interested in can help you determine what the end goal is.
 
-So for a lot of things, I think they’re more of directions than they are hard and fast goals. Like the north star in the night sky, or a half of a compass you want to travel towards. Even if the path I take isn’t the shortest distance between where I’m currently at, and where I think my goals are, it would be the correct path if it allows me to discover what my goals actually are.
+So for a lot of things, I think they’re more of directions than they are hard and fast goals. Like the north star in the night sky, or a half of a compass you want to travel towards. Even if the path I take isn’t the shortest distance between where I’m currently at and where I think my goals are, it is the correct path if it allows me to discover what my goals actually are.
 
 ## Giving up Options
 
